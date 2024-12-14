@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
   </head>
   <body>
-    <div>ovo nije samo početak</div>
-    <h2>jer je početak prazna stranica</h2>
-    <p>bitno je da ta stranica ne ostane prazna</p>
-    <button>da život ne bude dosadan</button>
+    <script id="table-template" type="text/x-handlebars-template"></script>
+    <table>
+      <tr>
+        <th>Redni broj</th>
+        <th>Ime vrste</th>
+      </tr>
+      <tbody id="pokemonTable"></tbody>
+    </table>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script src="poki.js"></script>
   </body>
 </html>

@@ -3,8 +3,14 @@ fetch(url)
   .then((color) => color.json())
   .then((yellow) => {
     const yellowPokemon = yellow.pokemon_species.slice(0, 20);
-    yellowPokemon.forEach((pokemon) => {
-      console.log(pokemon.name);
+    const table = document.querySelector("#pokemonTable");
+    yellowPokemon.forEach((pokemon, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${pokemon.name}</td>
+        `;
+      table.appendChild(row);
     });
   })
   .catch((error) => {
