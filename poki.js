@@ -6,9 +6,10 @@ fetch(url)
     const table = document.querySelector("#pokemonTable");
     yellowPokemon.forEach((pokemon, index) => {
       const row = document.createElement("tr");
+      const apiEndpoint = pokemon.url;
       row.innerHTML = `
           <td>${index + 1}</td>
-          <td>${pokemon.name}</td>
+         <td><a href="${apiEndpoint}" target="_blank">${pokemon.name}</a></td>
         `;
       table.appendChild(row);
     });
